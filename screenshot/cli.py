@@ -15,7 +15,8 @@ def main(url, all_pages):
     """Takes a full page screenshot with webkit2png."""
     click.echo('url is {}'.format(url))
     response = requests.get(url)
-    assert response.status_code == 404
+
+    assert response.status_code < 400
 
     page_num = 1
 
@@ -24,3 +25,5 @@ def main(url, all_pages):
         response = requests.get(page)
         response.raise_for_status()
         webkit2png(page)
+
+    webkit2png(url)
