@@ -26,3 +26,8 @@ Simply run:
 To use it:
 
     $ screenshot "http://www.google.com"
+
+or if the URL has a page query string such as `/?page=2`, you can use
+`-p` to walk the pages until the URL returns a 404 status.
+
+    $ screenshot -p "http://www.google.com"
