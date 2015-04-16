@@ -2,6 +2,10 @@
 
 Takes a full page screenshot with webkit2png.
 
+You'll need `webkit2png` installed.
+
+`brew install webkit2png`
+
 
 # Installation
 
@@ -18,4 +22,3 @@ Simply run:
 To use it:
 
     $ screenshot --help
-
