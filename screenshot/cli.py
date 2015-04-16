@@ -1,6 +1,7 @@
 import subprocess
 
 import click
+import requests
 
 
 def webkit2png(url):
@@ -12,4 +13,6 @@ def webkit2png(url):
 def main(url):
     """Takes a full page screenshot with webkit2png."""
     click.echo('url is {}.'.format(url))
+    response = requests.get(url)
+    assert response.status_code == 404
     webkit2png(url)
