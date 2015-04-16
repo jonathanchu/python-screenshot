@@ -21,9 +21,11 @@ def main(url, all_pages):
     page_num = 1
 
     if all_pages:
-        page = url + '?page={}'.format(page_num)
-        response = requests.get(page)
-        response.raise_for_status()
-        webkit2png(page)
-
-    webkit2png(url)
+        while True:
+            page = url + '?page={}'.format(page_num)
+            response = requests.get(page)
+            response.raise_for_status()
+            webkit2png(page)
+            page_num += 1
+    else:
+        webkit2png(url)
