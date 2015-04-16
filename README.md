@@ -25,4 +25,4 @@ Simply run:
 
 To use it:
 
-    $ screenshot --help
+    $ screenshot "http://www.google.com"
