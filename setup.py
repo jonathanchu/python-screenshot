@@ -3,7 +3,7 @@ Takes a full page screenshot with webkit2png.
 """
 from setuptools import find_packages, setup
 
-dependencies = ['click']
+dependencies = ['click', 'requests']
 
 setup(
     name='screenshot',
