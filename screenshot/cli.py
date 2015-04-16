@@ -13,7 +13,7 @@ def webkit2png(url):
 @click.argument('url', required=True)
 def main(url, all_pages):
     """Takes a full page screenshot with webkit2png."""
-    click.echo('url is {}.'.format(url))
+    click.echo('url is {}'.format(url))
     response = requests.get(url)
     assert response.status_code == 404
 
